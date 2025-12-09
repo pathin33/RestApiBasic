@@ -8,12 +8,12 @@ import {
 } from "../controller/user.controller.js";
 const router: Router = express.Router();
 
-router.get("/user", getAllUser);
+router.get("/users", getAllUser);
 
-router.post("/createUser", createUser);
+router.post("/users", createUser);
 
-router.put("/updateUser/:id", updateUser);
+router.put("/users/:id", updateUser);
 
-router.delete("/deleteUser/:id", deleteUser);
+router.delete("/users/:id", deleteUser);
 
 export default router;
