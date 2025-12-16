@@ -6,7 +6,6 @@ export const getAllUser = async (req: Request, res: Response) => {
   const allUser = await userModel.find();
   res.status(200).json(allUser);
 };
-
 //hàm tạo các user
 export const createUser = async (req: Request, res: Response) => {
   try {

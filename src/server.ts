@@ -1,5 +1,6 @@
 import express from "express";
-import router from "./router/user.route.js";
+import routerUser from "./router/user.route.js";
+import routerLogin from "./router/login.route.js";
 import * as dotenv from "dotenv";
 import connectDB from "./config/database.js";
 //tải biến môi trường
@@ -11,8 +12,8 @@ const port = process.env.PORT || 5000;
 //express.json() nhiệm vụ giải mã (parse) JSON mà client gửi lên → chuyển thành req.body
 app.use(express.json());
 
-app.use("/", router);
-
+app.use("/", routerUser);
+app.use("/", routerLogin);
 const runServer = async () => {
   try {
     //kết nối tới database
